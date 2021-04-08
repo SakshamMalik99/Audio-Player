@@ -21,7 +21,7 @@ def play_song():
         volume_label.config(fg="green",text="Volume : " + str(current_volume))
     except Exception as e:
         print(e)
-        song_title_label.config(fg="red", text="Error playing track")
+        song_title_label.config(fg="red", text="Error playing song")
         
         def reduce_volume():
     try:
