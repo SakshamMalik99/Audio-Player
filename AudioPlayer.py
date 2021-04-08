@@ -37,3 +37,23 @@ def play_song():
         print(e)
         song_title_label.config(fg="red",text="Track hasn't been selected yet")
 
+def increase_volume():
+    try:
+        global current_volume
+        if current_volume >=1:
+            volume_label.config(fg="green", text="Volume : Max")
+            return
+        current_volume = current_volume + float(0.1) 
+        current_volume = round(current_volume,1)
+        mixer.music.set_volume(current_volume)
+        volume_label.config(fg="green", text="Volume : "+str(current_volume))
+    except Exception as e:
+        print(e)
+        song_title_label.config(fg="red",text="Track hasn't been selected yet")
+        
+def pause():
+    try:
+        mixer.music.pause()
+    except Exception as e:
+        print(e)
+        song_title_label.config(fg="red",text="Track hasn't been selected yet")
