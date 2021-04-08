@@ -57,3 +57,13 @@ def pause():
     except Exception as e:
         print(e)
         song_title_label.config(fg="red",text="Track hasn't been selected yet")
+
+        def resume():
+    try:
+        mixer.music.unpause()
+    except Exception as e:
+        print(e)
+        song_title_label.config(fg="red",text="Track hasn't been selected yet")
+
+master = Tk()
+master.title("Music Player")
