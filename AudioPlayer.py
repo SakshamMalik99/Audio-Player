@@ -76,3 +76,10 @@ song_title_label.grid(stick="N",row=3)
 volume_label = Label(master,font=("Calibri",12))
 volume_label.grid(sticky="N",row=5)
 
+Button(master, text="Select Song", font=("Calibri",12),command=play_song).grid(row=2,sticky="N")
+Button(master, text="Pause",font=("Calibri",12),command=pause).grid(row=3,sticky="E")
+Button(master, text="Resume",font=("Calibri",12),command=resume).grid(row=3,sticky="W")
+Button(master, text="-",font=("Calibri",12),width=5,command=reduce_volume).grid(row=5,sticky="W")
+Button(master, text="+",font=("Calibri",12),width=5,command=increase_volume).grid(row=5,sticky="E")
+
+master.mainloop()
