@@ -49,7 +49,7 @@ def increase_volume():
         volume_label.config(fg="green", text="Volume : "+str(current_volume))
     except Exception as e:
         print(e)
-        song_title_label.config(fg="red",text="Track hasn't been selected yet")
+        song_title_label.config(fg="red",text="Track is not selected yet")
         
 def pause():
     try:
@@ -63,7 +63,7 @@ def pause():
         mixer.music.unpause()
     except Exception as e:
         print(e)
-        song_title_label.config(fg="red",text="Track hasn't been selected yet")
+        song_title_label.config(fg="red",text="Track is not selected yet")
 
 master = Tk()
 master.title("Music Player")
