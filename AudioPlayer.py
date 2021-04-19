@@ -56,7 +56,7 @@ def pause():
         mixer.music.pause()
     except Exception as e:
         print(e)
-        song_title_label.config(fg="red",text="Track hasn't been selected yet")
+        song_title_label.config(fg="red",text="Track is not selected yet")
 
         def resume():
     try:
