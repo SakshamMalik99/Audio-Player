@@ -7,7 +7,7 @@ from tkinter import filedialog
 current_volume = float(0.5)
 
 def play_song():
-    filename = filedialog.askopenfilename(initialdir="C:/",title="Please select a file")
+    filename = filedialog.askopenfilename(initialdir="C:/",title="Select a file")
     current_song = filename
     song_title   = filename.split("/")
     song_title   = song_title[-1]
@@ -67,3 +67,12 @@ def pause():
 
 master = Tk()
 master.title("Music Player")
+
+Label(master,text="Custom Music Player",background="black",font=("Calibri",15),fg="red").grid(sticky="N",row=0,padx=120)
+Label(master,text="Please select a music track you would like to play",font=("Calibri",12),fg="blue").grid(sticky="N",row=1)
+Label(master,text="Volume",background="black",font=("Calibri",12),fg="red").grid(sticky="N",row=4)
+song_title_label = Label(master,font=("Calibri",12))
+song_title_label.grid(stick="N",row=3)
+volume_label = Label(master,font=("Calibri",12))
+volume_label.grid(sticky="N",row=5)
+
